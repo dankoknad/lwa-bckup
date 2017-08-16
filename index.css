@@ -1,22 +1,43 @@
 body {
+  position: relative;
+  height: 100vh;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #000;
   background-image: url(https://images.pexels.com/photos/6533/landscape-mountains-nature-rock.jpg?w=1260&h=750&auto=compress&cs=tinysrgb);
-  background-size: cover;
+  -webkit-background-size: auto 100%;
+     -moz-background-size: auto 100%;
+       -o-background-size: auto 100%;
+          background-size: auto 100%;
 }
-.col-sm-offset-3 { 
-    padding: 15px;
-    margin-top: 50px;    
-    color: #FFF;
-    text-shadow: 2px 1px 2px #000;
-    background-color: rgba(255,255,255,.3);
-    border-radius: 2px; 
+
+@media only screen and (min-width: 1260px){
+  body {
+    -webkit-background-size: cover;
+      -moz-background-size: cover;
+        -o-background-size: cover;
+          background-size: cover;  
+  }  
 }
+
+.center-block { 
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 550px;
+  left: 15px;
+  right: 15px;
+  padding: 15px;
+  color: #FFF;
+  text-shadow: 2px 1px 2px #000;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 2px; 
+}
+
 a {
   font-weight: bold;
-  color: #222;
+  color: inherit;
   text-decoration: underline;
   text-shadow: none;
 }
